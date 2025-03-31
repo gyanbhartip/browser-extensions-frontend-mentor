@@ -1,10 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
-    --color-primary: #f35b56;
-    --color-dark-gray-200: #525767;
-    --color-dark-gray-300: #2f354b;
-    --color-dark-gray-400: #1f2535;
+    --color-primary: hsl(3, 86%, 64%);
+    --color-primary-darker: hsl(3, 71%, 56%);
+    --color-primary-darkest: hsl(3, 77%, 44%);
+    --color-dark-gray-200: hsl(226, 11%, 37%);
+    --color-dark-gray-300: hsl(225, 23%, 24%);
+    --color-dark-gray-400: hsl(226, 25%, 17%);
 }
 
 :root {
