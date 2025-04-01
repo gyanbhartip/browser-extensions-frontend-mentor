@@ -4,7 +4,5 @@ import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-    // assetsInclude: ['**/*.svg'],
     plugins: [react(), tailwindcss()],
-    // publicDir: 'public',
 });

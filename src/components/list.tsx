@@ -18,7 +18,7 @@ const List = () => {
             ) : (
                 <>
                     {error ? (
-                        <span className="text-xl font-bold text-orange-700">{`Error while fetching the extensions: ${error}`}</span>
+                        <span className="text-xl font-bold text-accent-darkest">{`Error while fetching the extensions: ${error}`}</span>
                     ) : (
                         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 relative">
                             {data.map(_ext => (

@@ -10,7 +10,18 @@ const Header = () => {
             : '/assets/icons/icon-sun.svg';
 
     const onThemeSwitch = useCallback(() => {
-        setMode(_t => (_t === 'dark' ? 'light' : 'dark'));
+        try {
+            setMode(_t => {
+                if (_t === 'dark') {
+                    localStorage.setItem('theme', 'light');
+                    return 'light';
+                }
+                localStorage.setItem('theme', 'dark');
+                return 'dark';
+            });
+        } catch (error) {
+            console.error('Error in setting theme: ', error);
+        }
     }, [setMode]);
 
     return (

@@ -36,7 +36,7 @@ const Card = ({ logo, name, description, isActive }: Props) => {
 
     return (
         <>
-            <div className="border border-gray-800 rounded-2xl py-4 px-3 w-full">
+            <div className="border dark:border-dark-gray-400 rounded-2xl py-4 px-3 w-full">
                 <div className="flex py-2">
                     <img
                         src={logo}

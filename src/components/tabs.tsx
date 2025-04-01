@@ -28,7 +28,7 @@ const Tabs = () => {
                         key={_tabItem}
                         bgColor={
                             selectedTab === _tabItem
-                                ? 'var(--color-primary)'
+                                ? 'var(--color-accent)'
                                 : undefined
                         }>
                         {_tabItem}

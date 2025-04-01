@@ -17,7 +17,7 @@ const Switch = ({ checked, setChecked }: Props) => {
                 checked={checked}
                 onChange={_onChangeHandler}
             />
-            <span className="absolute top-0 right-0 bottom-0 left-0 cursor-pointer rounded-[2rem] border-1 border-gray-400 bg-[#525868] peer-checked:bg-[#f35b56] before:absolute before:top-1/2 before:left-0.5 before:h-[0.7rem] before:w-[0.7rem] before:-translate-y-1/2 before:rounded-[0.7rem] before:bg-white before:transition before:duration-300 peer-checked:before:left-[1px] peer-checked:before:translate-x-[1rem] peer-checked:before:bg-white" />
+            <span className="absolute top-0 right-0 bottom-0 left-0 cursor-pointer rounded-[2rem] border-1 border-gray-400 bg-dark-gray-200 peer-checked:bg-[#f35b56] before:absolute before:top-1/2 before:left-0.5 before:h-[0.7rem] before:w-[0.7rem] before:-translate-y-1/2 before:rounded-[0.7rem] before:bg-white before:transition before:duration-300 peer-checked:before:left-[1px] peer-checked:before:translate-x-[1rem] peer-checked:before:bg-white" />
         </label>
     );
 };

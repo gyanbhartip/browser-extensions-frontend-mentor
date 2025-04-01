@@ -1,12 +1,44 @@
 @import 'tailwindcss';
+/* [instead of prefers-color-scheme(default behavior), look for dark class in HTML tree](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) */
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --color-primary: hsl(3, 86%, 64%);
-    --color-primary-darker: hsl(3, 71%, 56%);
-    --color-primary-darkest: hsl(3, 77%, 44%);
+    --color-accent: hsl(3, 86%, 64%);
+    --color-accent-darker: hsl(3, 71%, 56%);
+    --color-accent-darkest: hsl(3, 77%, 44%);
     --color-dark-gray-200: hsl(226, 11%, 37%);
     --color-dark-gray-300: hsl(225, 23%, 24%);
     --color-dark-gray-400: hsl(226, 25%, 17%);
+    --color-neutral-900: hsl(227, 75%, 14%);
+    --color-neutral-800: hsl(226, 25%, 17%);
+    --color-neutral-700: hsl(225, 23%, 24%);
+    --color-neutral-600: hsl(226, 11%, 37%);
+    --color-neutral-300: hsl(0, 0%, 78%);
+    --color-neutral-200: hsl(217, 61%, 90%);
+    --color-neutral-100: hsl(0, 0%, 93%);
+    --color-neutral-0: hsl(200, 60%, 99%);
+
+    --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+    --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+@layer utilities {
+    .bg-gradient-light {
+        background-image: var(--gradient-light);
+    }
+
+    .bg-gradient-dark {
+        background-image: var(--gradient-dark);
+    }
+}
+
+body {
+    background-image: var(--gradient-light);
+    height: 100dvh;
+}
+
+.dark body {
+    background-image: var(--gradient-dark);
 }
 
 :root {
@@ -33,6 +65,8 @@ html {
 
 * {
     scrollbar-width: thin;
+    /* low support as of now, later replace the other scrollbar workarounds with only this */
+    scrollbar-gutter: stable;
 }
 
 ::-webkit-scrollbar {
